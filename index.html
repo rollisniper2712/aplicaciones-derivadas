@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicaciones de la Derivada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuente Google opcional -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-icon">𝛿</span>
+            <span class="logo-text">DerivApp</span>
+        </div>
+        <nav class="nav">
+            <button class="nav-btn active" data-target="inicio">Inicio</button>
+            <button class="nav-btn" data-target="areas">Áreas</button>
+            <button class="nav-btn" data-target="recursos">Recursos</button>
+            <button class="nav-btn" data-target="conclusiones">Conclusiones</button>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN INICIO -->
+    <main>
+        <section id="inicio" class="section active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Aplicaciones de la Derivada</h1>
+                    <p>
+                        Explora cómo las derivadas permiten analizar tasas de cambio en 
+                        <strong>Economía, Física, Ciencia Ambiental, Medicina e Ingeniería</strong>.
+                        Navega por los módulos, interactúa con los ejemplos y descubre el impacto del cálculo en la vida real.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="primary-btn" data-target="areas">Explorar áreas</button>
+                        <button class="secondary-btn" data-target="recursos">Ver recursos multimedia</button>
+                    </div>
+                    <div class="hero-tags">
+                        <span>📈 Tasas de cambio</span>
+                        <span>🧪 Modelos reales</span>
+                        <span>🎧 Podcast</span>
+                        <span>🎥 Videos</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="orb orb1"></div>
+                    <div class="orb orb2"></div>
+                    <div class="hud-card">
+                        <h3>Panel de aprendizaje</h3>
+                        <p>5 áreas • 10 ejemplos paso a paso • 1 infografía • 1 PDF • 1 podcast</p>
+                        <ul>
+                            <li>✔ Problema real</li>
+                            <li>✔ Modelo matemático</li>
+                            <li>✔ Derivada aplicada</li>
+                            <li>✔ Interpretación del resultado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ÁREAS -->
+        <section id="areas" class="section">
+            <h2 class="section-title">Áreas de aplicación de la derivada</h2>
+            <p class="section-subtitle">
+                Selecciona un área para explorar dos ejemplos aplicados, explicados paso a paso.
+            </p>
+
+            <div class="areas-grid">
+                <!-- ECONOMÍA -->
+                <article class="area-card" data-area="economia">
+                    <img src="assets/economia.jpg" alt="Gráfica económica" class="area-img">
+                    <div class="area-body">
+                        <h3>Economía y Finanzas</h3>
+                        <p>La derivada se usa para analizar costos, ingresos y beneficios marginales.</p>
+                        <button class="area-btn" data-area="economia">Ver ejemplos</button>
+                    </div>
+                </article>
+
+                <!-- FÍSICA -->
+                <article class="area-card" data-area="fisica">
+                    <img src="assets/fisica.jpg" alt="Movimiento físico" class="area-img">
+                    <div class="area-body">
+                        <h3>Física</h3>
+                        <p>Relaciona posición, velocidad y aceleración mediante derivadas.</p>
+                        <button class="area-btn" data-area="fisica">Ver ejemplos</button>
+                    </div>
+                </article>
+
+                <!-- CIENCIA AMBIENTAL -->
+                <article class="area-card" data-area="ambiental">
+                    <img src="assets/ambiental.jpg" alt="Medio ambiente" class="area-img">
+                    <div class="area-body">
+                        <h3>Ciencia Ambiental</h3>
+                        <p>Permite modelar contaminación, agotamiento de recursos y regeneración.</p>
+                        <button class="area-btn" data-area="ambiental">Ver ejemplos</button>
+                    </div>
+                </article>
+
+                <!-- MEDICINA -->
+                <article class="area-card" data-area="medicina">
+                    <img src="assets/medicina.jpg" alt="Salud y medicina" class="area-img">
+                    <div class="area-body">
+                        <h3>Medicina</h3>
+                        <p>Se usa para estudiar concentración de fármacos y crecimiento de tumores.</p>
+                        <button class="area-btn" data-area="medicina">Ver ejemplos</button>
+                    </div>
+                </article>
+
+                <!-- INGENIERÍA -->
+                <article class="area-card" data-area="ingenieria">
+                    <img src="assets/ingenieria.jpg" alt="Ingeniería" class="area-img">
+                    <div class="area-body">
+                        <h3>Ingeniería</h3>
+                        <p>Ayuda a optimizar costos, analizar esfuerzos y mejorar diseños.</p>
+                        <button class="area-btn" data-area="ingenieria">Ver ejemplos</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- PANEL DINÁMICO DE EJEMPLOS -->
+            <div id="area-detalle" class="area-detalle hidden">
+                <button class="close-panel" id="cerrar-area">✕ Cerrar</button>
+                <div id="area-contenido">
+                    <!-- Aquí JS insertará el contenido de cada área -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN RECURSOS -->
+        <section id="recursos" class="section">
+            <h2 class="section-title">Recursos multimedia</h2>
+            <p class="section-subtitle">
+                Aquí se integran los recursos obligatorios: video propio, videos externos, infografía, PDF y podcast.
+            </p>
+
+            <div class="recursos-grid">
+                <!-- VIDEO PROPIO -->
+                <div class="recurso-card">
+                    <h3>🎥 Video propio</h3>
+                    <p>
+                        Graba un video explicando uno de los ejemplos (por ejemplo, el de Medicina o Economía)
+                        y súbelo a YouTube. Luego reemplaza el ID del video en el iframe.
+                    </p>
+                    <div class="video-frame">
+                        <!-- Reemplaza VIDEO_ID_PROPIO por tu ID de YouTube -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID_PROPIO" 
+                            title="Video propio sobre derivadas"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- VIDEOS EXTERNOS -->
+                <div class="recurso-card">
+                    <h3>🔗 Videos externos recomendados</h3>
+                    <p>Ejemplos de videos que puedes citar (actualiza los enlaces si eliges otros):</p>
+                    <ul class="video-links">
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=yr2b8mlT3NM" target="_blank">
+                                Introducción a las derivadas – Khan Academy en Español
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=85h9q4Ck1p0" target="_blank">
+                                Aplicaciones de la derivada en la vida real
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- INFOGRAFÍA -->
+                <div class="recurso-card">
+                    <h3>🖼 Infografía original</h3>
+                    <p>
+                        Crea tu infografía en Canva o Genially, descárgala como imagen y sustitúyela aquí.
+                    </p>
+                    <div class="infografia-frame">
+                        <img src="assets/infografia-derivadas.png" alt="Infografía sobre aplicaciones de la derivada">
+                    </div>
+                </div>
+
+                <!-- PDF -->
+                <div class="recurso-card">
+                    <h3>📄 Documento PDF</h3>
+                    <p>
+                        Haz clic para descargar el documento PDF con el resumen de las aplicaciones de la derivada.
+                    </p>
+                    <a class="primary-btn" href="assets/derivadas-aplicaciones.pdf" target="_blank">
+                        Abrir PDF
+                    </a>
+                </div>
+
+                <!-- PODCAST -->
+                <div class="recurso-card">
+                    <h3>🎧 Podcast</h3>
+                    <p>
+                        Graba un breve podcast (puede ser con tu voz explicando un ejemplo o reflexionando
+                        sobre la importancia de las derivadas) y guárdalo como <code>podcast-derivadas.mp3</code>.
+                    </p>
+                    <audio controls>
+                        <source src="assets/podcast-derivadas.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONCLUSIONES -->
+        <section id="conclusiones" class="section">
+            <h2 class="section-title">Conclusiones del proyecto</h2>
+
+            <div class="conclusiones-grid">
+                <article class="conclusion-card">
+                    <h3>Lo aprendido sobre las derivadas</h3>
+                    <p>
+                        A lo largo de este proyecto comprendimos que la derivada no es solo una operación algebraica,
+                        sino una herramienta que permite describir <strong>cómo cambian</strong> las variables en el
+                        tiempo y en el espacio. Analizar tasas de cambio nos llevó a interpretar fenómenos en
+                        economía, física, ciencia ambiental, medicina e ingeniería con mayor profundidad.
+                    </p>
+                </article>
+
+                <article class="conclusion-card">
+                    <h3>Importancia de las aplicaciones reales</h3>
+                    <p>
+                        Trabajar con problemas contextualizados facilitó la conexión entre los procedimientos
+                        matemáticos y situaciones cotidianas: decidir una dosis de medicamento, optimizar costos,
+                        estudiar el movimiento de un objeto o evaluar el nivel de contaminación. Las aplicaciones
+                        reales hacen que el cálculo sea significativo y útil para la toma de decisiones.
+                    </p>
+                </article>
+
+                <article class="conclusion-card">
+                    <h3>Valor del diseño y la comunicación visual</h3>
+                    <p>
+                        El uso de un diseño visual cuidado, infografías, videos y recursos interactivos contribuyó
+                        a que los conceptos abstractos fueran más accesibles. La combinación de texto, imagen y audio
+                        potencia la comprensión y demuestra que la matemática puede comunicarse de forma atractiva,
+                        clara y cercana a las personas.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Proyecto: Aplicaciones de la Derivada • Sitio interactivo educativo</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
